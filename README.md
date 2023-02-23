@@ -35,3 +35,12 @@ Crea una aplicación con React y ve transformandola para que pase por los siguie
         <Boton texto="Incrementar" operacion={incremento}/>
         <Boton texto="Reducir" operacion={decremento}/>
         ```
+- Estado 5:
+    - Dos componentes.
+    - Añadimos uno de nuestros `<Boton/>` que ponga en marcha el incremento automático del contador, de modo que su valor aumente cada segundo.
+        ```jsx
+        <h1>0</h1>
+        <Boton texto="Incrementar" operacion={incremento}/>
+        <Boton texto="Reducir" operacion={decremento}/>
+        <Boton texto="Automático" operacion={iniciaAutomatico}/>
+        ```
