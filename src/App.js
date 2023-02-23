@@ -1,10 +1,9 @@
 import { useState } from "react";
+import Boton from "./Boton";
 
 function App() {
 
   let [valorActual, setValorActual] = useState(0)
-  let [numeroIncrementos, setNumeroDeUsos] = useState(0)
-  let [numeroDecrementos, setNumeroDeDecrementos] = useState(0)
 
   function incrementar() {
     let novoValor = valorActual + 1
@@ -16,26 +15,14 @@ function App() {
     setValorActual(novoValor)
   }
 
-  function manexadorClickIncrementar() {
-    const novoNumeroDeUsos = numeroIncrementos+1
-    setNumeroDeUsos(novoNumeroDeUsos)
-    incrementar()
-  }
-
-  function manexadorClickDiminuir() {
-    const novoNumeroDeUsos = numeroDecrementos+1
-    setNumeroDeDecrementos(novoNumeroDeUsos)
-    diminuir()
-  }
-
   return (
     <>
       <h1>{valorActual}</h1>
-      <button onClick={manexadorClickIncrementar}>+({numeroIncrementos})</button>
-      <button onClick={manexadorClickDiminuir}>-({numeroDecrementos})</button>
+      <Boton texto="+" operacion={incrementar}/>
+      <Boton texto="-" operacion={diminuir}/>
     </>
   )
-  
+
 }
 
 export default App;
