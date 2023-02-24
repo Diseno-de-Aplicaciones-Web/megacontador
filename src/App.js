@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Boton from "./Boton";
+import "./App.css"
 
 function App() {
 
@@ -35,13 +36,16 @@ function App() {
   )
 
   return (
-    <>
-      <h1>{valorActual}</h1>
-      <Boton texto="+" operacion={incrementar}/>
-      <Boton texto="-" operacion={diminuir}/>
-      <Boton texto="Reiniciar" operacion={reiniciar}/>
-      <Boton texto="Auto" operacion={manexadorAuto}/>
-    </>
+    <main>
+      <h1>Megacontador</h1>
+      <p id="contador">{valorActual}</p>
+      <div>
+        <Boton texto="+" operacion={incrementar}/>
+        <Boton texto="-" operacion={diminuir}/>
+        <Boton texto="Reiniciar" operacion={reiniciar}/>
+        <Boton texto="Auto" operacion={manexadorAuto}/>
+      </div>
+    </main>
   )
 
 }
