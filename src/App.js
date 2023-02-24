@@ -20,6 +20,11 @@ function App() {
     setAuto(true)
   }
 
+  function reiniciar() {
+    setAuto(false)
+    setValorActual(0)
+  }
+
   useEffect(
     ()=>{
       let codigoTemporizador
@@ -34,6 +39,7 @@ function App() {
       <h1>{valorActual}</h1>
       <Boton texto="+" operacion={incrementar}/>
       <Boton texto="-" operacion={diminuir}/>
+      <Boton texto="Reiniciar" operacion={reiniciar}/>
       <Boton texto="Auto" operacion={manexadorAuto}/>
     </>
   )
