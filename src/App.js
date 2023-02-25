@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Boton from "./Boton";
 
 function App() {
 
   let [valorActual, setValorActual] = useState(0)
-  let [auto, setAuto] = useState(false)
 
   function incrementar() {
     let novoValor = valorActual + 1
@@ -16,23 +15,9 @@ function App() {
     setValorActual(novoValor)
   }
 
-  function manexadorAuto() {
-    setAuto(true)
-  }
-
   function reiniciar() {
-    setAuto(false)
     setValorActual(0)
   }
-
-  useEffect(
-    ()=>{
-      let codigoTemporizador
-      if (auto) { codigoTemporizador = setTimeout(incrementar, 1000) }
-      return ()=>{clearTimeout(codigoTemporizador)}
-    },
-    [auto, valorActual]
-  )
 
   return (
     <>
@@ -40,7 +25,6 @@ function App() {
       <Boton texto="+" operacion={incrementar}/>
       <Boton texto="-" operacion={diminuir}/>
       <Boton texto="Reiniciar" operacion={reiniciar}/>
-      <Boton texto="Auto" operacion={manexadorAuto}/>
     </>
   )
 
