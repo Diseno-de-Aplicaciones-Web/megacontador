@@ -47,7 +47,7 @@ Crea una aplicación con React y ve transformandola para que pase por los siguie
     <Boton texto="Reducir" operacion={decremento}/>
     <Boton texto="Reiniciar" operacion={reiniciar}/>
     ```
-1. **Contador con incremento automático** [↗️src](https://github.com/Diseno-de-Aplicaciones-Web/megacontador/tree/dos-componentes-autoincremento/src)
+6. **Contador con incremento automático** [↗️src](https://github.com/Diseno-de-Aplicaciones-Web/megacontador/tree/dos-componentes-autoincremento/src)
  
     ⚠️ DIFICULTAD CONSIDERABLE ⚠️
  
@@ -61,3 +61,4 @@ Crea una aplicación con React y ve transformandola para que pase por los siguie
      <Boton texto="Reducir" operacion={decremento}/>
      <Boton texto="Automático" operacion={iniciaAutomatico}/>
      ```
+7. **Aplicando Bootstrap** [↗️src](https://github.com/Diseno-de-Aplicaciones-Web/megacontador/tree/bootstrap/src)
