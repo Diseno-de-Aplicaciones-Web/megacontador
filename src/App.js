@@ -36,14 +36,28 @@ function App() {
   )
 
   return (
-    <main>
-      <h1>Megacontador</h1>
-      <p id="contador">{valorActual}</p>
-      <div>
-        <Boton texto="+" operacion={incrementar}/>
-        <Boton texto="-" operacion={diminuir}/>
-        <Boton texto="Reiniciar" operacion={reiniciar}/>
-        <Boton texto="Auto" operacion={manexadorAuto}/>
+    <main className="container">
+      <div className="row">
+        <div className="col-12 vh-100 d-flex flex-column justify-content-center">
+
+            <div className="card">
+              <div className="card-body d-flex flex-column align-items-center">
+
+                <h1 className="card-title">Megacontador</h1>
+
+                <p id="contador" className="card-text">{valorActual}</p>
+
+                <div className="btn-group">
+                  <Boton texto="+" operacion={incrementar}/>
+                  <Boton texto="-" operacion={diminuir} type="secondary"/>
+                  <Boton texto="Reiniciar" operacion={reiniciar} type="danger"/>
+                  <Boton texto="Auto" operacion={manexadorAuto}  type="success"/>
+                </div>
+
+              </div>
+            </div>
+
+        </div>
       </div>
     </main>
   )

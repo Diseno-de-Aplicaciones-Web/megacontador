@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Boton ({texto, operacion}) {
+function Boton ({texto, operacion, type="primary"}) {
     
     let [numeroDeClicks, setNumeroDeClicks] = useState(0)
 
@@ -11,7 +11,24 @@ function Boton ({texto, operacion}) {
     }
 
     return (
-        <button onClick={manexadorClick}>{texto}({numeroDeClicks})</button>
+        <button className={
+                "btn " +
+                ( type === "primary" ? "btn-primary" : "") +
+                ( type === "secondary" ? "btn-secondary" : "") +
+                ( type === "success" ? "btn-success" : "") +
+                ( type === "danger" ? "btn-danger" : "") +
+                ( type === "warning" ? "btn-warning" : "") +
+                ( type === "info" ? "btn-info" : "") +
+                ( type === "ligth" ? "btn-ligth" : "") +
+                ( type === "dark" ? "btn-dark" : "")
+            }
+            onClick={manexadorClick}
+        >
+            {texto}
+            <span className="badge badge-light ml-2">
+                {numeroDeClicks}
+            </span>
+        </button>
     )
 
 }
